@@ -1,4 +1,5 @@
 ﻿#include <gtest.h>
+#include "stack_and_queue.h"
 
 int main(int argc, char** argv)
 {
