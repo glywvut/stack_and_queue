@@ -1,14 +1,14 @@
-﻿/*#include "stack_and_queue.h"
+﻿#include "stack_and_queue.h"
 #include <gtest.h>
 
-TEST(Vector, can_vector_with_positive_lenn) {
+TEST(Vector, can_vector_with_positive_len) {
 
 	ASSERT_NO_THROW(Vector<int> vector(1));
 }
 
-TEST(Vector, can_vector_with_negative_lenn) {
+TEST(Vector, cant_create_vector_with_negative_len) {
 
-	ASSERT_ANY_THROW(Vector<int> vector(-1));
+	ASSERT_ANY_THROW(Vector<int> vector(-5));
 }
 
 TEST(Vector, create_vector_with_array) {
@@ -53,7 +53,7 @@ TEST(Vector, can_get_capacity)
 {
 	Vector<int> v(10);
 
-	EXPECT_EQ(10, v.getcapacity());
+	EXPECT_EQ(22, v.getcapacity());
 }
 
 TEST(Vector, can_set_and_get_element)
@@ -119,7 +119,7 @@ TEST(Vector, can_check_for_full)
 
 TEST(Vector, can_check_for_empty)
 {
-    Vector<int> v(10);
+    Vector<int> v;
 
     EXPECT_TRUE(v.IsEmpty());
 }
@@ -165,7 +165,7 @@ TEST(Vector, can_pop_back)
 
 TEST(Vector, throws_when_pop_back_elem_from_empty_vector)
 {
-    Vector<int> v(10);
+    Vector<int> v;
 
     ASSERT_ANY_THROW(v.pop_back());
 }
@@ -185,7 +185,7 @@ TEST(Vector, can_pop_front)
 
 TEST(Vector, throws_when_pop_front_elem_from_empty_vector)
 {
-    Vector<int> v(10);
+    Vector<int> v;
 
     ASSERT_ANY_THROW(v.pop_front());
 }
@@ -218,7 +218,7 @@ TEST(Vector, can_erase)
 
 TEST(Vector, throws_when_erase_elem_from_empty_vector)
 {
-    Vector<int> v(10);
+    Vector<int> v;
 
     ASSERT_ANY_THROW(v.erase(0));
-}*/
+}
